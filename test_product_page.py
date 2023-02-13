@@ -10,6 +10,7 @@ def test_guest_can_add_product_to_basket(browser):
     page.open()               # открываем страницу
     page.add_to_cart()        # добавляем товар в корзину
     page.solve_quiz_and_get_code()
+    time.sleep(100)
     page.should_be_added_to_cart()
     page.should_be_message_in_cart_total()
     time.sleep(10)
